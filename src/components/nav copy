@@ -1,0 +1,405 @@
+// import React, { useState,useEffect} from 'react'
+// import './Navbar.css'
+// import {CiSearch} from 'react-icons/ci'
+// import {AiOutlineDown} from 'react-icons/ai'
+// import {CgMenu} from 'react-icons/cg'
+
+
+// const Navbar = () => {
+
+//     const [hideSeek1,setHideSeek1]=useState(false)
+//     const [hideSeek2,setHideSeek2]=useState(false)
+//     const [hideSeek3,setHideSeek3]=useState(false)
+//     const [scrolling, setScrolling ]=useState(false)
+//     const [showmenu, setShowMenu ]=useState(false)
+
+
+
+//     const seeking1 = (e) => {
+//         e.preventDefault()
+//         setHideSeek1((hideSeek1) => !hideSeek1);
+//       };
+    
+
+//     const seeking2=(e)=>{
+//         e.preventDefault()
+//         setHideSeek2((hideSeek2) => !hideSeek2);
+//     }
+
+//     const seeking3=(e)=>{
+//         e.preventDefault()
+//         setHideSeek3((hideSeek3) => !hideSeek3);
+//     }
+
+//     const menuFun=()=>{
+//       setShowMenu((showmenu) => !showmenu);
+//     }
+
+//     useEffect(()=>{
+//       window.addEventListener("scroll",()=>{
+//         if(window.screenY>100){
+//           setScrolling(true)
+//         }else{
+//           setScrolling(false)
+//         }
+//       })
+//     })
+
+//   return (
+//     <>
+//       <div className={`nav ${scrolling && 'scrollFix'}`}>
+//         <div className="logo">
+//         <img className='logoImage' src="https://www.nicepng.com/png/full/244-2444940_royal-enfield-classic-satin-royal-enfield-motorcycle-logo.png" alt="" />
+//         </div>
+//         <div className="items">
+
+//             <a href="">Motorcycles</a>
+
+//             <div className='downItem'>
+//             <a href="" onClick={seeking1}>Shop The Look</a>
+//             <AiOutlineDown/>
+//             { hideSeek1 && ( 
+//            <div className='seek1'>
+//                 <a>Accessories</a>
+//                 <a>Apparel</a>     
+//             </div>
+//             )}
+//             </div>
+            
+//             <div className='downItem'>
+//             <a value=""  onClick={seeking2}>Own A Royal Enfeild</a>
+//             <AiOutlineDown/>
+//             {hideSeek2 &&(
+//             <div className='seek2'>
+//             <a>Retail</a>
+//             <a>Finance</a>
+//             <a>Book a Test Ride</a>
+//             <a>Configure Now</a>
+//             </div>
+//             )}
+//             </div>
+            
+            
+//             <a href="">Services</a>
+//             <a href="">Rides</a>
+
+
+//             <div className='downItem'>
+//             <a href="" onClick={seeking3}>Reach Us</a>
+//             <AiOutlineDown/>
+//             {hideSeek3 &&(
+//             <div className='seek3'>
+//                 <a>Support</a>
+//                 <a>Locate Us</a>
+//                 <a>Our World</a>
+//             </div>
+//             )}
+//             </div>
+
+//             </div>
+
+
+
+// { showmenu &&
+// <div className="Resitems">
+
+// <a href="">Motorcycles</a>
+
+// <div className='downItem'>
+// <a href="" onClick={seeking1}>Shop The Look</a>
+// <AiOutlineDown/>
+// { hideSeek1 && ( 
+// <div className='seek1'>
+//   <a>Accessories</a>
+//   <a>Apparel</a>     
+// </div>
+// )}
+// </div>
+
+// <div className='downItem'>
+// <a value=""  onClick={seeking2}>Own A Royal Enfeild</a>
+// <AiOutlineDown/>
+// {hideSeek2 &&(
+// <div className='seek2'>
+// <a>Retail</a>
+// <a>Finance</a>
+// <a>Book a Test Ride</a>
+// <a>Configure Now</a>
+// </div>
+// )}
+// </div>
+
+
+// <a href="">Services</a>
+// <a href="">Rides</a>
+
+
+// <div className='downItem'>
+// <a href="" onClick={seeking3}>Reach Us</a>
+// <AiOutlineDown/>
+// {hideSeek3 &&(
+// <div className='seek3'>
+//   <a>Support</a>
+//   <a>Locate Us</a>
+//   <a>Our World</a>
+// </div>
+// )}
+// </div>
+
+// </div>
+// }
+
+
+
+
+
+
+
+
+//             <div className="icon">
+//                 <div className='i'>
+//                 <h4>Login</h4>
+//                 <AiOutlineDown/>
+//                 </div>
+//                 <CiSearch className='search'/>
+//                 <div className='i'>
+//                 <h4>En</h4>
+//                 <AiOutlineDown/>
+//                 </div>
+//                 <CgMenu className='menu' onClick={menuFun}/>
+//             </div>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default Navbar
+
+
+
+
+
+
+
+
+
+
+
+
+// .nav{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 0 2rem;
+//     color: white;
+//     background-color: black;
+//     height: 4.5rem;
+//     position: relative;
+// }
+
+// .scrollFix{
+//     position: fixed;
+// }
+
+// .logoImage{
+//     width: 10rem;
+// }
+
+// .items{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 55%;
+//     /* position: relative; */
+//     height: 100%;
+// }
+
+// .items>a{
+//     font-size: .9rem;
+//     text-decoration: none;
+//     color: white;
+//     font-weight: bold;
+// }
+
+
+// .items>:hover{
+//     color: red;
+//     cursor: pointer;
+// }
+
+// .downItem,.downItem>a{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: .9rem;
+//     text-decoration: none;
+//     color: white;
+//     font-weight: bold;
+// }
+
+// .downItem>a:hover{
+//     color: red;
+//     cursor: pointer;
+// }
+
+// .seek1{
+//     position:absolute ;
+//     top: 3rem;
+//     left:27.9rem;
+//     color: white;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     background-color: black;
+//     height: 5rem;
+//     width: 6rem;
+//     padding: 0 1rem;
+//     z-index: 10000;    
+// }
+
+// .seek2{
+//     position:absolute ;
+//     top: 3rem;
+//     left:37rem;
+//     color: white;
+//     display: flex;
+//     justify-content: space-around;
+//     flex-direction: column;
+//     background-color: black;
+//     height: 10rem;
+//     width: 8rem;
+//     padding: 0 1rem;
+//     z-index: 10000;    
+
+// }
+
+// .seek3{
+//     position:absolute ;
+//     top: 3rem;
+//     left:58rem;
+//     color: white;
+//     display: flex;
+//     justify-content: space-around;
+//     flex-direction: column;
+//     background-color: black;
+//     height:8rem;
+//     width: 8rem;
+//     padding: 0 1rem;
+//     z-index: 10000;    
+
+// }
+
+// .seek1>a:hover,.seek2>a:hover,.seek3>a:hover{
+//     color: red;
+// }
+
+// /* select{
+//     margin: 0%;
+//     padding: 0%;
+//     background:transparent;
+//     color: white;
+//     outline: none;
+//     border: none;
+// }
+
+// option{
+//     background-color: black;
+//     height: 10rem;
+//  }
+
+//  option>:hover{
+//     background-color: black;
+//  } */
+
+// .icon{
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     width: 9rem;
+//     font-size: .9rem;
+
+// }
+
+// .i{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: .5rem;
+//     cursor: pointer;
+// }
+
+// .search{
+//     font-size: 1.6rem;
+// }
+
+// .menu{
+//     display: none;
+// }
+
+
+
+// @media screen and (max-width: 850px) {
+
+//     .items{
+//         display: none;
+//     }
+
+//     .menu{
+//         display:block;
+//     }
+
+//     .Resitems{
+//         position: absolute;
+//         top: 2rem;
+//         left:8rem;
+//         color: white;
+//         display: flex;
+//         justify-content: space-around;
+//         flex-direction: column;
+//         background-color: black;
+//         align-items: flex-start;
+//         width: 55%;
+//         height: 100%;
+//         padding: 0 1rem;
+//         z-index: 10000;
+
+//     }
+// /* 
+//     .seek3{
+//         position:absolute ;
+//         top: 3rem;
+//         left:58rem;
+//         color: white;
+//         display: flex;
+//         justify-content: space-around;
+//         flex-direction: column;
+//         background-color: black;
+//         height:8rem;
+//         width: 8rem;
+//         padding: 0 1rem;
+//         z-index: 10000;    
+    
+//     }
+//      */
+//     .Resitems>a{
+//         font-size: .9rem;
+//         text-decoration: none;
+//         color: white;
+//         font-weight: bold;
+//         z-index: 10000;
+
+//     }
+    
+    
+//     .Resitems>:hover{
+//         color: red;
+//         cursor: pointer;
+//     }
+// }
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+.popular{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    margin: 0%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+}
+.all{
+    display: flex;
+    /* height: 60vh; */
+    overflow-y: hidden;
+    flex-wrap: wrap;
+}
+
+.Wrapper{
+    width: 25%;
+    height: 100%;
+    overflow-y: hidden;
+    position: relative;
+
+}
+
+.Wrapper>h2{
+    position: absolute;
+    z-index: 10000;
+    top: 10rem;
+    left: 5rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.Wrapper>h2:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.instaImageWrap{
+    width: 100%;
+    height: 100%;
+}
+
+.instaImage{
+    width: 100%;
+    height: 60vh;
+}
+
+.insta{
+    position: absolute;
+    z-index: 10000;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color:rgba(32, 31, 31,.7) ;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.instaIcon{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+
+.help{
+    background-color:rgb(32, 31, 31) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.iconDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: rgb(159, 156, 156);
+    cursor: pointer;
+}
+
+.iconDiv:hover.iconDiv>div{
+        color: red;
+        transition: 1s linear;
+}
+
+.helpIcons{
+    font-size: 3rem;
+    font-weight: lighter;
+
+}
+
+.iconDiv>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+    .all{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .Wrapper{
+        width: 50%;
+        height: 100%;
+        overflow-y: hidden;
+        position: relative;
+    
+    }
+    .instaImage{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .help{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .iconDiv{
+        border: 1px solid gray;
+        margin: 1rem;
+        width: 9rem;
+    }
+}
